@@ -1,0 +1,11 @@
+<h1>{{(currentProject | async)?.title}}</h1>
+<h1>{{(currentProject | async)?.description}}</h1>
+<h3>{{(currentProject | async)?.pledges}}</h3>
+<div *ngFor="let pledge of (currentProject | async)?.pledges">
+  <h1>{{pledge.amount}}</h1>
+</div>
+
+<!-- <div class="projectPledges" *ngFor="let pledge of (currentProject.pledges | async)?.pledges">
+  <h1>Pledge Description -> {{pledge.pledgeDescription}}</h1>
+  <h1>Pledge Amount -> {{pledge.pledgeAmount}}</h1>
+</div> -->

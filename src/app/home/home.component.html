@@ -18,7 +18,7 @@
   <div class="col-md-10">
     <h1 class="displayHeader">{{display}}</h1>
     <div class="projectsDisplay" *ngFor="let project of displayProjects | async">
-      <h3>{{project.title}}</h3>
+      <h3 (click)="projectDetail(project.$key)">{{project.title}}</h3>
     </div>
   </div>
 </div>
