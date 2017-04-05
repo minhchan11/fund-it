@@ -1,5 +1,5 @@
 {
-  "project": [
+  "projects": [
     {
       "title": "project1",
       "description": "description1",
@@ -21,7 +21,7 @@
       "pledges": {"1": true}
     }
   ],
-  "pledge": [
+  "pledges": [
     {
       "amount": 1,
       "description": "describe1",

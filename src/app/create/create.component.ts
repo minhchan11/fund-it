@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../project.model';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  styleUrls: ['./create.component.css'],
+  providers: [ProjectService]
 })
 export class CreateComponent implements OnInit {
 
-  constructor(public projectService: ProjectService) { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
   }
