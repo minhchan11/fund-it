@@ -1,0 +1,36 @@
+{
+  "project": [
+    {
+      "title": "project1",
+      "description": "description1",
+      "whyFundUs": "reason1",
+      "about": "about1",
+      "category": "category1",
+      "fundingGoal": 1,
+      "profilePic": "pic",
+      "pledges": {"0": true}
+    },
+    {
+      "title": "project2",
+      "description": "description2",
+      "whyFundUs": "reason1",
+      "about": "about1",
+      "category": "category1",
+      "fundingGoal": 1,
+      "profilePic": "pic",
+      "pledges": {"1": true}
+    }
+  ],
+  "pledge": [
+    {
+      "amount": 1,
+      "description": "describe1",
+      "project": "0"
+    },
+    {
+      "amount": 1,
+      "description": "describe1",
+      "project": "1"
+    }
+  ]
+}
