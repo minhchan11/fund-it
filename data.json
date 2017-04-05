@@ -8,7 +8,7 @@
       "category": "category1",
       "fundingGoal": 1,
       "profilePic": "pic",
-      "pledges": {"0": true}
+      "pledges": ["0"]
     },
     {
       "title": "project2",
@@ -18,18 +18,23 @@
       "category": "category1",
       "fundingGoal": 1,
       "profilePic": "pic",
-      "pledges": {"1": true}
+      "pledges": ["1","2"]
     }
   ],
   "pledges": [
     {
       "amount": 1,
       "description": "describe1",
+      "project": "0"
+    },
+    {
+      "amount": 100,
+      "description": "describe2",
       "project": "1"
     },
     {
-      "amount": 1,
-      "description": "describe1",
+      "amount": 1000,
+      "description": "describe3",
       "project": "1"
     }
   ]
