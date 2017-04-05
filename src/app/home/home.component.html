@@ -1,3 +1,25 @@
-<p>
-  home works!
-</p>
+<div class="homePage">
+<div class="row">
+  <div class="col-md-2">
+    <h1>Categories</h1>
+    <ul>
+      <li (click)="displayCategory('Art')">Art</li>
+      <li (click)="displayCategory('Crafts')">Crafts</li>
+      <li (click)="displayCategory('Film & Video')">Film & Video</li>
+      <li (click)="displayCategory('Fashion')">Fashion</li>
+      <li (click)="displayCategory('Game')">Game</li>
+      <li (click)="displayCategory('Outdoors')">Outdoors</li>
+      <li (click)="displayCategory('Kitchen')">Kitchen</li>
+      <li (click)="displayCategory('Food')">Food</li>
+      <li (click)="displayCategory('Music')">Music</li>
+      <li (click)="displayCategory('Technology')">Technology</li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <h1 class="displayHeader">{{display}}</h1>
+    <div class="projectsDisplay" *ngFor="let project of displayProjects | async">
+      <h3>{{project.title}}</h3>
+    </div>
+  </div>
+</div>
+</div>
