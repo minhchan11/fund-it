@@ -1,0 +1,31 @@
+<h1>Create Project</h1>
+<div class="form-group">
+  <label for="title">Title</label>
+  <input #newTitle>
+</div>
+<div class="form-group">
+  <label for="description">Description</label>
+  <input #newDescription>
+</div>
+<div class="form-group">
+  <label for="whyFundUs">Why Fund Us</label>
+  <input #newWhyFundUs>
+</div>
+<div class="form-group">
+  <label for="aboutUs">About Us</label>
+  <input #newAboutUs>
+</div>
+<div class="form-group">
+  <label for="fundingGoal">Funding Goal</label>
+  <input type="number" #newFundingGoal>
+</div>
+<div class="form-group">
+  <label for="category">Category</label>
+  <input #newCategory>
+</div>
+<div class="form-group">
+  <label for="profilePic">Profile Picture</label>
+  <input #newProfilePicture>
+</div>
+
+<button type="submit" (click)="createProject(newTitle.value, newDescription.value, newWhyFundUs.value, newAboutUs.value, newFundingGoal.value, newCategory.value, newProfilePicture.value)">Create Project</button>

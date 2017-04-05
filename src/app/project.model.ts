@@ -1,7 +1,8 @@
 export class Project {
   public currentFunding: number = 0;
-
-  constructor(public title: string, public description: string, public whyFundUs: string, public about: string, public category: string, public fundingGoal: number, public profilePic: string, public pledges: Pledge[]) { }
+  public pledges: Pledge[] = [];
+  
+  constructor(public title: string, public description: string, public whyFundUs: string, public about: string, public category: string, public fundingGoal: number, public profilePic: string) { }
 }
 
 export class Pledge {

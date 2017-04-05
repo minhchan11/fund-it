@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { CreateComponent } from './create/create.component';
 
 
 export const firebaseConfig = {
@@ -19,7 +20,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
