@@ -1,32 +1,21 @@
-<div class="row">
-  <div class="col-md-2">
-    <br>
+
+<md-grid-list cols="4" rowHeight="300px">
+  <md-grid-tile [colspan]="1" [rowspan]="2" color="md-light-blue">
     <md-select (change)="onChange($event.value)" placeholder="Filter">
       <md-option value="all">All</md-option>
       <md-option value="Art">Art</md-option>
       <md-option value="Technology">Technology</md-option>
       <md-option value="FilmVideo">Film & Video</md-option>
     </md-select>
-    <h1>Categories</h1>
-    <ul>
-      <li (click)="displayCategory('Art')">Art</li>
-      <li (click)="displayCategory('Crafts')">Crafts</li>
-      <li (click)="displayCategory('Film & Video')">Film & Video</li>
-      <li (click)="displayCategory('Fashion')">Fashion</li>
-      <li (click)="displayCategory('Game')">Game</li>
-      <li (click)="displayCategory('Outdoors')">Outdoors</li>
-      <li (click)="displayCategory('Kitchen')">Kitchen</li>
-      <li (click)="displayCategory('Food')">Food</li>
-      <li (click)="displayCategory('Music')">Music</li>
-      <li (click)="displayCategory('Technology')">Technology</li>
-    </ul>
-  </div>
-  <div class="col-md-10">
+  </md-grid-tile>
+  <md-grid-tile [colspan]="3" [rowspan]="1">
     <h1 class="displayHeader">{{display}}</h1>
-    <div class="projectsDisplay" *ngFor="let project of displayProjects | categoryPipe: filterCriteria | async">
+  </md-grid-tile>
+  <md-grid-tile [colspan]="3" [rowspan]="1">
+    <div *ngFor="let project of displayProjects | categoryPipe: filterCriteria | async">
       <md-card >
         <h3 (click)="projectDetail(project.$key)">{{project.title}}</h3>
       </md-card>
     </div>
-  </div>
-</div>
+  </md-grid-tile>
+</md-grid-list>

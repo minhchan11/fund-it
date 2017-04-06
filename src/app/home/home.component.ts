@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
   providers: [ProjectService]
 })
 export class HomeComponent implements OnInit {
-  display = "Displaying All Fund Its";
+  display = "Displaying All Projects";
   displayProjects: FirebaseListObservable<any[]>;
   filterCriteria: string = "all";
 
@@ -22,18 +22,13 @@ export class HomeComponent implements OnInit {
     this.displayProjects = this.projectService.getProjects();
   }
 
-  displayCategory(category: string) {
-    this.display = "Displaying " + category + " Fund Its";
-  }
-
   projectDetail(projectId: string) {
     this.router.navigate(['project', projectId]);
   }
 
   onChange(selectedOption){
-
     this.filterCriteria = selectedOption;
-    console.log(selectedOption);
+    this.display = "Displaying All Project in: " + this.filterCriteria;
   }
 
 }
