@@ -1,5 +1,5 @@
 
-<md-grid-list cols="4" rowHeight="300px">
+<md-grid-list cols="4" rowHeight="100px">
   <md-grid-tile [colspan]="1" [rowspan]="2" color="md-light-blue">
     <md-select (change)="onChange($event.value)" placeholder="Filter">
       <md-option value="all">All</md-option>
@@ -11,12 +11,13 @@
   <md-grid-tile [colspan]="3" [rowspan]="1">
     <h1 class="displayHeader">{{display}}</h1>
   </md-grid-tile>
-  <md-grid-tile [colspan]="3" [rowspan]="1">
+  <md-grid-tile [colspan]="3" [rowspan]="6">
     <div *ngFor="let project of displayProjects | categoryPipe: filterCriteria | async">
       <md-card >
         <h3 (click)="projectDetail(project.$key)">{{project.title}}</h3>
         <div *ngIf="currentRoute === '/admin'">
         <h4>{{project.description}}</h4>
+        <app-edit [project] = "project"></app-edit>
         </div>
       </md-card>
     </div>

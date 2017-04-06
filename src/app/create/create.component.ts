@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
@@ -17,8 +17,8 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  createProject(title: string, description: string, whyFundUs: string, aboutUs: string, fundingGoal: number, category: string, profilePic: string) {
-    var newProject = new Project(title, description ,whyFundUs, aboutUs, category, fundingGoal, profilePic);
+  createProject(title: string, description: string, whyFundUs: string, fundingGoal: number, category: string) {
+    var newProject = new Project(title, description ,whyFundUs, category, fundingGoal);
     this.projectService.addProject(newProject);
     this.router.navigate(['']);
   }

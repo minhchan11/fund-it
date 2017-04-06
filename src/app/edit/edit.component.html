@@ -1,0 +1,23 @@
+<h6>Edit Project</h6>
+  <md-input-container>
+      <input mdInput placeholder="Edit Project Title" [(ngModel)]="project.title">
+  </md-input-container>
+  <br>
+  <md-input-container>
+      <input mdInput placeholder="Edit Project Description" [(ngModel)]="project.description">
+  </md-input-container>
+  <br>
+  <md-input-container>
+      <input mdInput placeholder="Edit Why Fund You" [(ngModel)]="project.whyFundUs">
+  </md-input-container>
+  <br>
+  <md-input-container>
+      <input type="number" mdInput placeholder="Edit Funding Goal" [(ngModel)]="project.fundingGoal"> $
+  </md-input-container>
+  <br>
+  <md-input-container>
+      <input mdInput placeholder="Edit Category" [(ngModel)]="project.category">
+  </md-input-container>
+  <br>
+
+  <button (click)="update(project)">Edit</button>

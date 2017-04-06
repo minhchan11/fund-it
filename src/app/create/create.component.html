@@ -1,5 +1,4 @@
 <h1>Create Project</h1>
-<form >
   <md-input-container>
       <input mdInput placeholder="Project Title" #newTitle>
   </md-input-container>
@@ -13,20 +12,12 @@
   </md-input-container>
   <br>
   <md-input-container>
-      <input mdInput placeholder="About Us" #newAboutUs>
-  </md-input-container>
-  <br>
-  <md-input-container>
-      <input mdInput placeholder="Funding Goal" #newFundingGoal> $
+      <input type="number" mdInput placeholder="Funding Goal" #newFundingGoal> $
   </md-input-container>
   <br>
   <md-input-container>
       <input mdInput placeholder="Category" #newCategory>
   </md-input-container>
   <br>
-  <md-input-container>
-      <input mdInput placeholder="Profile Pic" #newProfilePicture>
-  </md-input-container>
-</form>
 
-<button md-fab (click)="createProject(newTitle.value, newDescription.value, newWhyFundUs.value, newAboutUs.value, newFundingGoal.value, newCategory.value, newProfilePicture.value)">Create Project</button>
+<button md-fab (click)="createProject(newTitle.value, newDescription.value, newWhyFundUs.value, newFundingGoal.value, newCategory.value)"><md-icon>check</md-icon></button>

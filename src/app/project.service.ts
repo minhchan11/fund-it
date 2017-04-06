@@ -49,4 +49,14 @@ export class ProjectService {
   return this.filterPledges;
 }
 
+        editProject(project){
+            var editedProject = this.getProjectById(project.$key);
+            editedProject.update({title: project.title,
+                                  description: project.description,
+                                   whyFundUs: project.whyFundUs,
+                                 category: project.category,
+                                  fundingGoal: project.fundingGoal});
+
+          }
+
 }

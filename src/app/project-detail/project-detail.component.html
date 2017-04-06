@@ -1,6 +1,9 @@
 <h1>{{(currentProject | async)?.title}}</h1>
 <h1>{{(currentProject | async)?.description}}</h1>
 <h3>{{(currentProject | async)?.pledges}}</h3>
+<h4>{{(currentProject | async)?.category}}</h4>
+<h4>About: {{(currentProject | async)?.whyFundUs}}</h4>
+<h4>Funding Goal: {{(currentProject | async)?.fundingGoal}}</h4>
 
   <div *ngFor="let pledge of filteredPledges">
       <h2>{{(pledge | async)?.amount}} dollars </h2>
