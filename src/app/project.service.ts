@@ -58,5 +58,8 @@ export class ProjectService {
                                   fundingGoal: project.fundingGoal});
 
           }
-
+      deleteProject(project){
+        var editedProject = this.getProjectById(project.$key);
+        editedProject.remove();
+      }
 }
