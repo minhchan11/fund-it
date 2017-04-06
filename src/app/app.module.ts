@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { CategoryPipePipe } from './category-pipe.pipe';
 
 
 export const firebaseConfig = {
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     HomeComponent,
     CreateComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    CategoryPipePipe
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
       "description": "description1",
       "whyFundUs": "reason1",
       "about": "about1",
-      "category": "category1",
+      "category": "Art",
       "fundingGoal": 1,
       "profilePic": "pic",
       "pledges": ["0"]
@@ -15,7 +15,7 @@
       "description": "description2",
       "whyFundUs": "reason1",
       "about": "about1",
-      "category": "category1",
+      "category": "Technology",
       "fundingGoal": 1,
       "profilePic": "pic",
       "pledges": ["1","2"]
@@ -24,17 +24,17 @@
   "pledges": [
     {
       "amount": 1,
-      "description": "describe1",
+      "description": "Peasant Pledge",
       "project": "0"
     },
     {
       "amount": 100,
-      "description": "describe2",
+      "description": "Normal Pledge",
       "project": "1"
     },
     {
       "amount": 1000,
-      "description": "describe3",
+      "description": "Deluxe Pledge",
       "project": "1"
     }
   ]

@@ -6,10 +6,16 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class ProjectService {
   projects: FirebaseListObservable<any[]>;
   pledges: FirebaseListObservable<any[]>;
-  filteredItems:Array<any>=[]
+  filterPledges:Array<any>=[]
 
   constructor(private angularFire: AngularFire) {
       this.projects = angularFire.database.list('projects');
+      // this.projects = angularFire.database.list('projects', {
+      //   query: {
+      //  orderByChild: 'category',
+      //  equalTo: 'Art'
+      //   }
+      // });
       this.pledges = angularFire.database.list('pledges');
    }
 
@@ -30,26 +36,17 @@ export class ProjectService {
    }
 
    getPledgebyId(projectId: string) {
-     this.filteredItems=[];
+     this.filterPledges=[];
   var thisProject = this.angularFire.database.object('projects/' + projectId);
   thisProject.subscribe(snapshot => {
         var array = snapshot.pledges;
         array.forEach(item => {
           var pledge = this.angularFire.database.object('pledges/' + item);
-          this.filteredItems.push(pledge);
-          console.log(this.filteredItems);
+          this.filterPledges.push(pledge);
+          console.log(this.filterPledges);
         });
     })
-  return this.filteredItems;
+  return this.filterPledges;
 }
-  //  getPledgeById(projectId: string) {
-  //    var allPledge = this.pledges;
-  //    var output: Pledge[] = [];
-  //    for (let i = 0; i < allPledge.length; i++) {
-  //       if (allPledge[i].project.id === projectId) {
-  //         output.push(allPledge[i]);
-  //       }
-  //    }
-  //    return output;
-  //  }
+
 }
