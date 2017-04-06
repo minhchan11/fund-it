@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "title": "project1",
+      "title": "Some Art Stuffs",
       "description": "description1",
       "whyFundUs": "reason1",
       "about": "about1",
@@ -11,7 +11,7 @@
       "pledges": ["0"]
     },
     {
-      "title": "project2",
+      "title": "Some Tech Stuffs",
       "description": "description2",
       "whyFundUs": "reason1",
       "about": "about1",
@@ -19,6 +19,16 @@
       "fundingGoal": 1,
       "profilePic": "pic",
       "pledges": ["1","2"]
+    },
+    {
+      "title": "Some Film Stuffs",
+      "description": "description2",
+      "whyFundUs": "reason1",
+      "about": "about1",
+      "category": "FilmVideo",
+      "fundingGoal": 1,
+      "profilePic": "pic",
+      "pledges": ["1"]
     }
   ],
   "pledges": [

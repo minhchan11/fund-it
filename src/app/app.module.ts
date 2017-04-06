@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CreateComponent } from './create/create.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { CategoryPipe} from './category.pipe';
-
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     FormsModule,
     HttpModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,12 @@
-<div class="homePage">
 <div class="row">
   <div class="col-md-2">
-    <select (change)="onChange($event.target.value)">
-      <option value="all">All</option>
-      <option value="Art">Art</option>
-      <option value="Technology">Technology</option>
-    </select>
+    <br>
+    <md-select (change)="onChange($event.target.value)">
+      <md-option value="all">All</md-option>
+      <md-option value="Art">Art</md-option>
+      <md-option value="Technology">Technology</md-option>
+      <md-option value="FilmVideo">Film & Video</md-option>
+    </md-select>
     <h1>Categories</h1>
     <ul>
       <li (click)="displayCategory('Art')">Art</li>
@@ -23,8 +24,9 @@
   <div class="col-md-10">
     <h1 class="displayHeader">{{display}}</h1>
     <div class="projectsDisplay" *ngFor="let project of displayProjects | categoryPipe: filterCriteria | async">
-      <h3 (click)="projectDetail(project.$key)">{{project.title}}</h3>
+      <md-card >
+        <h3 (click)="projectDetail(project.$key)">{{project.title}}</h3>
+      </md-card>
     </div>
   </div>
-</div>
 </div>
