@@ -12,6 +12,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { CategoryPipe} from './category.pipe';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     HomeComponent,
     CreateComponent,
     ProjectDetailComponent,
-    CategoryPipe
+    CategoryPipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

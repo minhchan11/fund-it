@@ -15,11 +15,13 @@ export class HomeComponent implements OnInit {
   display = "Displaying All Projects";
   displayProjects: FirebaseListObservable<any[]>;
   filterCriteria: string = "all";
+  currentRoute = this.router.url;
 
   constructor(private projectService: ProjectService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
     this.displayProjects = this.projectService.getProjects();
+    console.log(this.currentRoute);
   }
 
   projectDetail(projectId: string) {
@@ -30,5 +32,7 @@ export class HomeComponent implements OnInit {
     this.filterCriteria = selectedOption;
     this.display = "Displaying All Project in: " + this.filterCriteria;
   }
+
+
 
 }

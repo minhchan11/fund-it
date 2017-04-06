@@ -14,7 +14,6 @@ import { Location } from '@angular/common';
 export class ProjectDetailComponent implements OnInit {
   projectId: string;
   currentProject: FirebaseObjectObservable<any>;
-  // pledges: FirebaseListObservable<any[]>;
   filteredPledges:Array<any>;
 
 
@@ -25,9 +24,7 @@ export class ProjectDetailComponent implements OnInit {
         this.projectId = urlParameters['id'];
     });
     this.currentProject = this.projectService.getProjectById(this.projectId);
-    // this.pledges = this.projectService.getPledges();
     this.filteredPledges = this.projectService.getPledgebyId(this.projectId);
-
   }
 
 }
