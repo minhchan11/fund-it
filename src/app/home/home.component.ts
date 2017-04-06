@@ -14,6 +14,7 @@ import { Location } from '@angular/common';
 export class HomeComponent implements OnInit {
   display = "Displaying All Fund Its";
   displayProjects: FirebaseListObservable<any[]>;
+  filterCriteria: string = "all";
 
   constructor(private projectService: ProjectService, private router: Router, private route: ActivatedRoute, private location: Location) { }
 
@@ -27,6 +28,12 @@ export class HomeComponent implements OnInit {
 
   projectDetail(projectId: string) {
     this.router.navigate(['project', projectId]);
+  }
+
+  onChange(selectedOption){
+
+    this.filterCriteria = selectedOption;
+    console.log(selectedOption);
   }
 
 }
