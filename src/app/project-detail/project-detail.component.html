@@ -2,13 +2,8 @@
 <h1>{{(currentProject | async)?.description}}</h1>
 <h3>{{(currentProject | async)?.pledges}}</h3>
 
-<h2>Down here</h2>
-  <div *ngFor="let pledge of (pledges | async)">
-    <!-- <div *ngIf="pledge.$key === '0'"> -->
-      <h1>{{pledge.$key}}</h1>
-      <h2>{{pledge.description}}</h2>
+  <div *ngFor="let pledge of filteredPledges">
       <h2>{{pledge.amount}}</h2>
-    <!-- </div> -->
   </div>
 
 
